@@ -1,0 +1,11 @@
+#resultCont {
+    color: black;
+    border: 2px solid black;
+    padding: 20px;
+    width: 650px;
+    margin-bottom: 10px;
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+}
+
