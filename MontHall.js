@@ -1,40 +1,40 @@
-var win = [];
-var lose = [];
-var paraHold = [];
+let win = [];
+let lose = [];
+let paraHold = [];
 
-var resultCont = document.getElementById("resultCont");
+let resultCont = document.getElementById("resultCont");
 
-var stayBut = document.getElementById("stayBut");
+let stayBut = document.getElementById("stayBut");
 stayBut.addEventListener("click", getArgStay);
 
-var switchBut = document.getElementById("switchBut");
+let switchBut = document.getElementById("switchBut");
 switchBut.addEventListener("click", getArgSwitch);
 
 function getArgStay() {
-var stayBut = document.getElementById("stayBut").style.background = "yellow";
-var switchBut = document.getElementById("switchBut").style.background = "none";
+let stayBut = document.getElementById("stayBut").style.background = "yellow";
+varlet switchBut = document.getElementById("switchBut").style.background = "none";
 paraHold.push("stay");
 }
 
 function getArgSwitch() {
-var stayBut = document.getElementById("stayBut").style.background = "none";
-var switchBut = document.getElementById("switchBut").style.background = "yellow";
+let stayBut = document.getElementById("stayBut").style.background = "none";
+let switchBut = document.getElementById("switchBut").style.background = "yellow";
 paraHold.push("switch");
 }
 
-var buttton = document.getElementById("button");
+let buttton = document.getElementById("button");
 button.addEventListener("click", MontyHallTest);
 
 function MontyHallTest(arg) {
-    var arg = paraHold[0];
-    var formreps = document.getElementById("reps").value;
-    var result = [];
+    let arg = paraHold[0];
+    let formreps = document.getElementById("reps").value;
+    let result = [];
 
     if (arg == "switch") {
-        for (var i = 0; i < formreps; i++) {
-            var winDoor = Math.ceil(Math.random() * 3);
-            var chooseDoor = Math.ceil(Math.random() * 3);     
-            var game = [];
+        for (let i = 0; i < formreps; i++) {
+            let winDoor = Math.ceil(Math.random() * 3);
+            let chooseDoor = Math.ceil(Math.random() * 3);     
+            let game = [];
             game.push(winDoor);
             game.push(chooseDoor);
             result.push("In test " + (i + 1) + ", the winning door is " + winDoor + "<br>");
@@ -90,12 +90,12 @@ function MontyHallTest(arg) {
             resultCont.innerHTML = result;
 
     } else if (arg == "stay") {
-        var formreps = document.getElementById("reps").value;
+        let formreps = document.getElementById("reps").value;
     
-        for (var i = 0; i < formreps; i++) {
-            var winDoor = Math.ceil(Math.random() * 3);
+        for (let i = 0; i < formreps; i++) {
+            let winDoor = Math.ceil(Math.random() * 3);
             result.push("In test " + (i + 1) + ", the winning door is " + winDoor + "<br>");
-            var chooseDoor = Math.ceil(Math.random() * 3);
+            let chooseDoor = Math.ceil(Math.random() * 3);
             result.push("In test " + (i + 1) + ", the user choice was " + chooseDoor + "<br>");
             result.push("The user chose to stay <br>");
 
