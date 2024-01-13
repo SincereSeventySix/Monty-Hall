@@ -12,7 +12,7 @@ switchBut.addEventListener("click", getArgSwitch);
 
 function getArgStay() {
 let stayBut = document.getElementById("stayBut").style.background = "yellow";
-varlet switchBut = document.getElementById("switchBut").style.background = "none";
+let switchBut = document.getElementById("switchBut").style.background = "none";
 paraHold.push("stay");
 }
 
